@@ -15,12 +15,11 @@ class Experience(models.Model):
     user_age = models.PositiveIntegerField(
         validators=[MinValueValidator(18)])
     headset_type = models.CharField(choices=HEADSETS)
-    duration_of_use = models.PositiveIntegerField(
-        validators=[MinValueValidator(1)])
+    duration_of_use = models.FloatField(validators=[MinValueValidator(1)])
     motion_sickness = models.PositiveIntegerField(
         choices=MOTION_SICKNESS_CHOICES)
     immersion_level = models.PositiveIntegerField(
         choices=IMMERSION_LEVEL_CHOICES)
 
-    def __str__(self):
-        return self.name
+    def __int__(self):
+        return self.pk
