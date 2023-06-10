@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'vr_exp_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vr_exp_db',
+        'USER': 'vr_exp_admin',
+        'PASSWORD': 'virtual',
+        'HOST': 'localhost'
     }
 }
 
