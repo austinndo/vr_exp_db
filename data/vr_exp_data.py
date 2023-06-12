@@ -18,7 +18,7 @@ def clean_csv(csv_file):
 
 # clean_csv("virtual_reality_exp.csv")
 
-
+# convert to json to add file to django fixtures for preloading/seeding data
 def convert_to_json(csv_file, jsonFilePath):
     data = []
     with open(csv_file, encoding='utf-8') as csvf:
