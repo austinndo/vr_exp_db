@@ -11,5 +11,5 @@ class ExperienceSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Experience
-        fields = ('user_age', 'headset_type', 'duration_of_use',
+        fields = ('pk', 'user_age', 'headset_type', 'duration_of_use',
                   'motion_sickness', 'immersion_level', 'experience')

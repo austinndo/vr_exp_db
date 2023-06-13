@@ -4,6 +4,10 @@ from .serializers import ExperienceSerializer
 from .models import Experience
 
 
+def index(request):
+    return render(request, 'index.html')
+
+
 class ExperienceList(generics.ListCreateAPIView):
     queryset = Experience.objects.all()
     serializer_class = ExperienceSerializer
